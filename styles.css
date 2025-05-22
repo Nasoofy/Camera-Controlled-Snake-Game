@@ -1,0 +1,44 @@
+#navbar{
+    height: 17vh;
+    justify-content: space-around;
+    align-items: center;
+
+}
+#navbar,.navbar-achivements{
+    display: flex;
+}
+.navbar-achivements{
+    list-style: none;
+    gap: 5rem;
+}
+.logo{
+    width: 80px;
+    height: auto;
+
+}
+.logo:hover{
+    cursor: default;
+}
+.canvas-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameCanvas{
+    border: 2px solid black;
+}
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+}
+#resetbutton{
+    width:  100px;
+    height: 30px;
+    border: 2px solid black;
+}
+#score{
+    font-family: sans-serif;
+    font-size: 50px;
+}
