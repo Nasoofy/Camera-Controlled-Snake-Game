@@ -24,18 +24,44 @@ let snake = [
 ];
 window.addEventListener("keydown",changeDirection);
 resetbutton.addEventListener("click",resetGame);
-function gameStart() {};
-function nextTick(){};
+gameStart();
+
+function gameStart() {
+    running = true;
+    scoreText.textContent = score;
+    createFood();
+    drawFood();
+    nextTick()
+};
+function nextTick(){
+    if (running) {
+        setTimeout(()=>{
+            clearBoard();
+            drawFood();
+            moveSnake();
+            drawsnake();
+            checkGameOver();
+            nextTick();
+        },75)
+    }
+};
 function clearBoard(){};
 function createFood(){
     function randomFood(min,max){
-        const randNum = Math.round((Math.random()(max-min)+min))
+        const randNum = Math.round((Math.random()* (max - min) + min) / unitSize)*unitSize;
         return randNum;
     }
+    foodX = randomFood(0,gameWidth - unitSize);
+    console.log(foodX);
+    foodY = randomFood(0,gameWidth - unitSize);
 };
-function drawFood(){};
+function drawFood(){
+    ctx.fillstyle = foodColor;
+    ctx.fillRect(foodX,foodY,unitSize,unitSize);
+};
 function moveSnake(){};
 function changeDirection(){};
 function checkGameOver(){};
 function displayGameOver(){};
 function resetGame(){};
+function drawsnake(){};
