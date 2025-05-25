@@ -40,7 +40,18 @@ function gameStart() {
     createFood();
     nextTick();
 }
-
+function drawCheckerboard(rows, cols, size) {
+    for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+            if ((row + col) % 2 === 0) {
+                ctx.fillStyle = "#e0e0e0";
+            } else {
+                ctx.fillStyle = "#ffffff";
+            }
+            ctx.fillRect(col * size, row * size, size, size);
+        }
+    }
+}
 function nextTick() {
     if (running) {
         setTimeout(() => {
@@ -55,9 +66,8 @@ function nextTick() {
     }
 }
 
-function clearBoard(){
-    ctx.fillStyle = boardBack;
-    ctx.fillRect(0, 0, gameWidth, gameHeight);
+function clearBoard() {
+    drawCheckerboard(gameHeight / unitSize, gameWidth / unitSize, unitSize);
 }
 
 function createFood(){

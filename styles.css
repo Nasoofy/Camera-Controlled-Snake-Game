@@ -1,7 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: burlywood;
+}
 #navbar{
+    background-color: white;
     height: 17vh;
     justify-content: space-around;
     align-items: center;
+    padding: 0;
 
 }
 #navbar,.navbar-achivements{
@@ -27,6 +38,7 @@
 }
 #gameCanvas{
     border: 2px solid black;
+
 }
 .button-wrapper{
     display: flex;
@@ -42,7 +54,9 @@
 #score{
     font-family: sans-serif;
     font-size: 50px;
+    padding:2rem
 }
 #video {
-    display: none;
+    width: 200px;
+
 }
