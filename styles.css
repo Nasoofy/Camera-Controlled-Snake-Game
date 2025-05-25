@@ -43,3 +43,6 @@
     font-family: sans-serif;
     font-size: 50px;
 }
+#video {
+    display: none;
+}
