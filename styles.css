@@ -8,7 +8,6 @@ body{
     background-color: burlywood;
 }
 #navbar{
-    background-color: white;
     height: 17vh;
     justify-content: space-around;
     align-items: center;
@@ -16,6 +15,7 @@ body{
 
 }
 #navbar,.navbar-achivements{
+    background-color: rgb(253, 225, 188);
     display: flex;
 }
 .navbar-achivements{
@@ -58,5 +58,6 @@ body{
 }
 #video {
     width: 200px;
+    
 
 }
