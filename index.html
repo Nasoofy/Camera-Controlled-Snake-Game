@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <nav id="navbar">
@@ -18,7 +19,12 @@
         <canvas id="gameCanvas" width="600" height="600"></canvas>
     </div>
     <div class="button-wrapper">
-        <button id ="resetbutton">Reset</button>
+        <button id ="playbutton">
+            <i class="material-icons">play_arrow</i>
+        </button>
+        <button id ="resetbutton">
+            <i class="material-icons">refresh</i>
+        </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>

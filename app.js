@@ -2,6 +2,7 @@ const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 const scoreText = document.getElementById("score");
 const resetbutton = document.getElementById("resetbutton");
+const startbutton = document.getElementById("playbutton");
 const video = document.getElementById("video");
 
 const gameWidth = canvas.width;
@@ -29,8 +30,8 @@ let snake = [
     {x:0, y:0}
 ];
 
+startbutton.addEventListener("click", gameStart);
 resetbutton.addEventListener("click", resetGame);
-gameStart();
 
 
 function gameStart() {
@@ -134,7 +135,10 @@ function resetGame(){
         {x:unitSize,y:0},
         {x:0, y:0}
     ];
-    gameStart();
+    clearBoard();     
+    drawsnake();        
+    drawFood();         
+    running = false;    
 }
 
 
@@ -211,5 +215,8 @@ function changeDirection(){
             break;
     }
 }
+clearBoard();
+drawsnake();
+createFood();
 
 
